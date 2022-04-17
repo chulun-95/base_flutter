@@ -46,29 +46,4 @@ class HomeView extends GetView<HomeController> {
       ),
     );
   }
-
-  void showDialog() {
-    Get.dialog(
-        Center(
-          child: Container(
-            width: 200,
-            height: 100,
-            color: Colors.blue,
-          ),
-        ),
-        barrierDismissible: true);
-  }
-
-  void showSnackBar() {
-    Get.showSnackbar(
-      const GetSnackBar(
-        message: 'Hello',
-        margin: EdgeInsets.all(16),
-        isDismissible: true,
-        duration: Duration(milliseconds: 1000),
-        borderRadius: 10,
-        snackPosition: SnackPosition.BOTTOM,
-      ),
-    );
-  }
 }
