@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:getx_prj_base/app/theme/theme_manager.dart';
+import 'package:getx_prj_base/app/utils/widget_utils/app_scaffold.dart';
 import '../../../theme/textstyles.dart';
 import '../controllers/home_controller.dart';
 
@@ -10,22 +11,17 @@ class HomeView extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    print('HomeView rebuild');
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('HomeView'),
-        centerTitle: true,
-      ),
+    return AppScaffold(
       body: Center(
         child: SingleChildScrollView(
           child: Column(
             children: [
               InkWell(
                 onTap: () {
-                  // ThemeManager().setThemeMode(ThemeMode.dark);
-                  // Get.changeTheme(ThemeManager().getTheme());
+                  ThemeManager().setThemeMode(ThemeMode.dark);
+                  Get.changeTheme(ThemeManager().getTheme());
                   // showDialog();
-                  showSnackBar();
+                  // showSnackBar();
                 },
                 child: const Text(
                   'Dark',
@@ -64,13 +60,15 @@ class HomeView extends GetView<HomeController> {
   }
 
   void showSnackBar() {
-    Get.showSnackbar(const GetSnackBar(
-      message: 'hihihihihihihi',
-      margin: EdgeInsets.all(16),
-      isDismissible: true,
-      duration: Duration(milliseconds: 1000),
-      borderRadius: 10,
-      snackPosition: SnackPosition.BOTTOM,
-    ));
+    Get.showSnackbar(
+      const GetSnackBar(
+        message: 'Hello',
+        margin: EdgeInsets.all(16),
+        isDismissible: true,
+        duration: Duration(milliseconds: 1000),
+        borderRadius: 10,
+        snackPosition: SnackPosition.BOTTOM,
+      ),
+    );
   }
 }

@@ -1,3 +1,5 @@
+import 'app/utils/widget_utils/app_loading.dart';
+
 enum AppEnv { dev, staging, pro }
 
 enum BuildType { dev, release }
@@ -26,5 +28,9 @@ class AppConfig {
       default:
         return '';
     }
+  }
+
+  Future<void> configApp() async{
+    initLoadingStyle();
   }
 }

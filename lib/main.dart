@@ -5,8 +5,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:getx_prj_base/app/core/widget/app_loading.dart';
 import 'package:getx_prj_base/app/theme/theme_dark.dart';
+import 'package:getx_prj_base/app_config.dart';
 import 'package:getx_prj_base/generated/locales.g.dart';
 
 import 'app/routes/app_pages.dart';
@@ -17,7 +17,7 @@ void main() {
     await SystemChrome.setPreferredOrientations(
         <DeviceOrientation>[DeviceOrientation.portraitUp]);
 
-    initLoadingStyle();
+    AppConfig().configApp();
 
     runApp(
       ScreenUtilInit(

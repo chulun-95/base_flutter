@@ -82,7 +82,7 @@ class _DropdownMenuPainter extends CustomPainter {
   }
 }
 
-// The widget that is the button wrapping the menu items.
+// The widget_utils that is the button wrapping the menu items.
 class _DropdownMenuItemButton<T> extends StatefulWidget {
   const _DropdownMenuItemButton({
     Key? key,
@@ -771,7 +771,7 @@ class _DropdownRoutePage<T> extends StatelessWidget {
   }
 }
 
-// This widget enables _DropdownRoute to look up the sizes of
+// This widget_utils enables _DropdownRoute to look up the sizes of
 // each menu item. These sizes are used to compute the offset of the selected
 // item so that _DropdownRoutePage can align the vertical center of the
 // selected item lines up with the vertical center of the dropdown button,
@@ -810,7 +810,7 @@ class _RenderMenuItem extends RenderProxyBox {
   }
 }
 
-// The container widget for a menu item created by a [DropdownButton]. It
+// The container widget_utils for a menu item created by a [DropdownButton]. It
 // provides the default configuration for [DropdownMenuItem]s, as well as a
 // [DropdownButton]'s hint and disabledHint widgets.
 class _DropdownMenuItemContainer extends StatelessWidget {
@@ -823,9 +823,9 @@ class _DropdownMenuItemContainer extends StatelessWidget {
     required this.child,
   }) : super(key: key);
 
-  /// The widget below this widget in the tree.
+  /// The widget_utils below this widget_utils in the tree.
   ///
-  /// Typically a [Text] widget.
+  /// Typically a [Text] widget_utils.
   final Widget child;
 
   /// Defines how the item is positioned within the container.
@@ -1024,19 +1024,19 @@ class TVSIDropDownButton<T> extends StatefulWidget {
   /// if it is non-null.
   final T? value;
 
-  /// A placeholder widget that is displayed by the dropdown button.
+  /// A placeholder widget_utils that is displayed by the dropdown button.
   ///
   /// If [value] is null and the dropdown is enabled ([items] and [onChanged] are non-null),
-  /// this widget is displayed as a placeholder for the dropdown button's value.
+  /// this widget_utils is displayed as a placeholder for the dropdown button's value.
   ///
   /// If [value] is null and the dropdown is disabled and [disabledHint] is null,
-  /// this widget is used as the placeholder.
+  /// this widget_utils is used as the placeholder.
   final Widget? hint;
 
-  /// A preferred placeholder widget that is displayed when the dropdown is disabled.
+  /// A preferred placeholder widget_utils that is displayed when the dropdown is disabled.
   ///
   /// If [value] is null, the dropdown is disabled ([items] or [onChanged] is null),
-  /// this widget is displayed as a placeholder for the dropdown button's value.
+  /// this widget_utils is displayed as a placeholder for the dropdown button's value.
   final Widget? disabledHint;
 
   /// {@template flutter.material.dropdownButton.onChanged}
@@ -1045,7 +1045,7 @@ class TVSIDropDownButton<T> extends StatefulWidget {
   /// If the [onChanged] callback is null or the list of [TVSIDropDownButton.items]
   /// is null then the dropdown button will be disabled, i.e. its arrow will be
   /// displayed in grey and it will not respond to input. A disabled button
-  /// will display the [TVSIDropDownButton.disabledHint] widget if it is non-null.
+  /// will display the [TVSIDropDownButton.disabledHint] widget_utils if it is non-null.
   /// If [TVSIDropDownButton.disabledHint] is also null but [TVSIDropDownButton.hint] is
   /// non-null, [TVSIDropDownButton.hint] will instead be displayed.
   /// {@endtemplate}
@@ -1062,7 +1062,7 @@ class TVSIDropDownButton<T> extends StatefulWidget {
   /// A builder to customize the dropdown buttons corresponding to the
   /// [DropdownMenuItem]s in [items].
   ///
-  /// When a [DropdownMenuItem] is selected, the widget that will be displayed
+  /// When a [DropdownMenuItem] is selected, the widget_utils that will be displayed
   /// from the list corresponds to the [DropdownMenuItem] of the same index
   /// in [items].
   ///
@@ -1102,12 +1102,12 @@ class TVSIDropDownButton<T> extends StatefulWidget {
   /// [ThemeData.textTheme] of the current [Theme].
   final TextStyle? style;
 
-  /// The widget to use for drawing the drop-down button's underline.
+  /// The widget_utils to use for drawing the drop-down button's underline.
   ///
   /// Defaults to a 0.0 width bottom border with color 0xFFBDBDBD.
   final Widget? underline;
 
-  /// The widget to use for the drop-down button's icon.
+  /// The widget_utils to use for the drop-down button's icon.
   ///
   /// Defaults to an [Icon] with the [Icons.arrow_drop_down] glyph.
   final Widget? icon;
