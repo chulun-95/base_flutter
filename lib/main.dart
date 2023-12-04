@@ -24,7 +24,7 @@ void main() {
         designSize: const Size(720, 1080),
         minTextAdapt: true,
         splitScreenMode: true,
-        builder: () {
+        builder: (BuildContext context, Widget? widget) {
           return GetMaterialApp(
             title: "Application",
             initialRoute: AppPages.INITIAL,

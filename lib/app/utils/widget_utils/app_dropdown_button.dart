@@ -339,7 +339,6 @@ class _DropdownMenuState<T> extends State<_DropdownMenu<T>> {
                 child: Scrollbar(
                   radius: widget.scrollbarRadius,
                   thickness: widget.scrollbarThickness,
-                  isAlwaysShown: widget.scrollbarAlwaysShow,
                   child: ClipRRect(
                     //Prevent items from going beyond the menu rounded border boundaries when scrolling.
                     borderRadius: widget.dropdownDecoration?.borderRadius
